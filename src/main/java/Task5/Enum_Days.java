@@ -9,7 +9,7 @@ public class Enum_Days {
         String aWeekend = "is a weekend";
         String notAWeekend = "is not a weekend";
 
-        System.out.println("Please, input the number of the day: ");
+        System.out.println("Please, input the number of the day:  ");
 
         choice = scanner.nextInt();
 

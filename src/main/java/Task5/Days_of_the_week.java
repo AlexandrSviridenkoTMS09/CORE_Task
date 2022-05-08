@@ -4,7 +4,7 @@ import java.util.Scanner;
 
 public class Days_of_the_week {
     public static void main(String args[]) throws Exception {   /*как реализовать через enum и будет ли это короче?*/
-        System.out.println("Введите порядковый номер дня недели: ");
+        System.out.println("Введите порядковый номер дня недели:  ");
         Scanner console = new Scanner(System.in);
         int number_day = console.nextInt();
 
