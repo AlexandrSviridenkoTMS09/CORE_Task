@@ -1,9 +1,8 @@
 package Task3;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
-public class TextProcessorHelper2 {
+public class TextProcessorHelper {
 
     static String addWordEnd(String text) {
         String otherText = "Fine!";

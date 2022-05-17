@@ -8,7 +8,7 @@ public class Printer {
         Scanner console = new Scanner(System.in);
         String text = console.nextLine();
 
-        TextProcessorHelper2 textProcessorHelper2 = new TextProcessorHelper2();
+        TextProcessorHelper textProcessorHelper2 = new TextProcessorHelper();
         System.out.println(textProcessorHelper2.addWordEnd(text));
         System.out.println(textProcessorHelper2.addBeforeFirstWord(text));
         System.out.println(textProcessorHelper2.deleteCharacter(text));
