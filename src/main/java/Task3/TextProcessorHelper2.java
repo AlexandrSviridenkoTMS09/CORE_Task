@@ -48,7 +48,7 @@ public class TextProcessorHelper2 {
         return final_text;
     }
 
-    static char[] removeLowercaseCharacters(String text) {
+    static String removeLowercaseCharacters(String text) {
         String new_text = text;
         new_text = new_text.toUpperCase();
         char[] text_char = text.toCharArray();
@@ -67,7 +67,7 @@ public class TextProcessorHelper2 {
             }
         }
         final_text1 = String.valueOf(final_text);
-        return final_text;
+        return final_text1;
     }
 
     static String choiceOfEverySecondLetter(String text) {
