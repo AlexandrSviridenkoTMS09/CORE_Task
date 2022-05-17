@@ -1,30 +1,32 @@
-package Task4;
+package Task3;
 
 import java.util.Arrays;
 import java.util.Scanner;
 
 public class TextProcessorHelper2 {
 
-    static void Task1(String text) {
+    static String addWordEnd(String text) {
         String otherText = "Fine!";
         text = text.concat(otherText);
-        System.out.println(text);
+        return text;
     }
 
-    static void Task2(String text) {
+    static String addBeforeFirstWord(String text) {
         String new_text = (new StringBuilder(text)).insert(6, " dear").toString();
-        System.out.println(new_text);
+        return new_text;
     }
 
-    static void Task3(String text) {
-        System.out.println(text.replace("!", ""));
+    static String deleteCharacter(String text) {
+        String newText = text.replace("!", "");
+        return newText;
     }
 
-    static void Task4(String text) {
-        System.out.println(text.replace("user", "programmer"));
+    static String changeWord(String text) {
+        String newText = text.replace("user", "programmer");
+        return newText;
     }
 
-    static void Task5(String text) {
+    static StringBuilder backToFront(String text) {
         StringBuilder sb = new StringBuilder();
         String[] words = text.split(" ");
         for (String word : words) {
@@ -34,35 +36,41 @@ public class TextProcessorHelper2 {
             }
             sb.append(" ");
         }
-        System.out.println(sb);
+        return sb;
     }
 
-    static void Task6(String text) {
+    static String removeSpaces(String text) {
         String[] words = text.split(" ");
         String final_text = "";
         for (String word : words) {
             final_text += word;
         }
-        System.out.println(final_text);
+        return final_text;
     }
 
-    static void Task7(String text) {
+    static char[] removeLowercaseCharacters(String text) {
         String new_text = text;
         new_text = new_text.toUpperCase();
         char[] text_char = text.toCharArray();
         char[] new_text_char = new_text.toCharArray();
+        char[] final_text = new char[0];
+        int j = 0;
+        String final_text1;
 
         for (int i = 0; i < text.length(); i++) {
             if (text_char[i] == ' ') {
                 i++;
             }
             if (text_char[i] == new_text_char[i]) {
-                System.out.print(text_char[i]);
+                final_text[j] = text_char[i];
+                j++;
             }
         }
+        final_text1 = String.valueOf(final_text);
+        return final_text;
     }
 
-    static void Task8(String text) {
+    static String choiceOfEverySecondLetter(String text) {
 
         StringBuilder newText = new StringBuilder();
         char[] text_char = text.toCharArray();
@@ -73,10 +81,10 @@ public class TextProcessorHelper2 {
         }
         String final_text = newText.toString();
         final_text = final_text.toUpperCase();
-        System.out.println(final_text);
+        return final_text;
     }
 
-    static void Task9() {
+    static String findWordsOrSpaceAndPrintThem() {
         System.out.println("Введите размер массива: ");
         Scanner console = new Scanner(System.in);
         int size = console.nextInt();
@@ -89,13 +97,12 @@ public class TextProcessorHelper2 {
             result = result.concat("&" + (text1.equals(" ") || text1.equals("") ? "String is empty" : text1));
         }
         String[] words = result.split("&");
-        for (int i = 1; i <= size; i++) {
-            System.out.println(words[i]);
-        }
+
+        String final_text1 = String.valueOf(words);
+        return final_text1;
     }
 
-
-    static void Task10() {
+    static void equals() {
         String str1 = "Java";
         String str2 = "JAVA";
         String str3 = "C#";
