@@ -1,4 +1,4 @@
-package Task2.by.incubator;
+package Task2;
 
 import java.net.URL;
 import java.net.MalformedURLException;
@@ -10,7 +10,7 @@ public class Main {
 
         URL[] urls = new URL[]{new URL("file:///C://Users//Александр//IdeaProjects//CORE1//out//example.jar")};
         URLClassLoader classLoader = new URLClassLoader(urls);
-        Class<?> clazz = classLoader.loadClass("Task2.by.incubator.Main");
+        Class<?> clazz = classLoader.loadClass("Task2.Main");
         try {
             Main instance = (Main) clazz.newInstance();
             instance.main(new String[]{});
