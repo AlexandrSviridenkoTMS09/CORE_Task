@@ -8,16 +8,15 @@ public class Printer {
         Scanner console = new Scanner(System.in);
         String text = console.nextLine();
 
-        TextProcessorHelper textProcessorHelper2 = new TextProcessorHelper();
-        System.out.println(textProcessorHelper2.addWordEnd(text));
-        System.out.println(textProcessorHelper2.addBeforeFirstWord(text));
-        System.out.println(textProcessorHelper2.deleteCharacter(text));
-        System.out.println(textProcessorHelper2.changeWord(text));
-        System.out.println(textProcessorHelper2.backToFront(text));
-        System.out.println(textProcessorHelper2.removeSpaces(text));
-        System.out.println(textProcessorHelper2.choiceOfEverySecondLetter(text));
-        System.out.println(textProcessorHelper2.removeLowercaseCharacters(text));
-        System.out.println(textProcessorHelper2.findWordsOrSpaceAndPrintThem());
-        textProcessorHelper2.equals();
+        System.out.println(TextProcessorHelper.addWordEnd(text));
+        System.out.println(TextProcessorHelper.addBeforeFirstWord(text));
+        System.out.println(TextProcessorHelper.deleteCharacter(text));
+        System.out.println(TextProcessorHelper.changeWord(text));
+        System.out.println(TextProcessorHelper.backToFront(text));
+        System.out.println(TextProcessorHelper.removeSpaces(text));
+        System.out.println(TextProcessorHelper.choiceOfEverySecondLetter(text));
+        System.out.println(TextProcessorHelper.removeLowercaseCharacters(text));
+        System.out.println(TextProcessorHelper.findWordsOrSpaceAndPrintThem());
+        TextProcessorHelper.equals();
     }
 }

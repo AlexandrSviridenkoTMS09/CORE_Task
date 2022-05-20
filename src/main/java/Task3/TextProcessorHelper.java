@@ -49,12 +49,12 @@ public class TextProcessorHelper {
 
     static String removeLowercaseCharacters(String text) {
         String new_text = text;
+        String final_text1;
         new_text = new_text.toUpperCase();
         char[] text_char = text.toCharArray();
         char[] new_text_char = new_text.toCharArray();
-        char[] final_text = new char[0];
+        char[] final_text = new char[10];
         int j = 0;
-        String final_text1;
 
         for (int i = 0; i < text.length(); i++) {
             if (text_char[i] == ' ') {
@@ -65,7 +65,7 @@ public class TextProcessorHelper {
                 j++;
             }
         }
-        final_text1 = String.valueOf(final_text);
+        final_text1 = new String(final_text);
         return final_text1;
     }
 
@@ -96,9 +96,12 @@ public class TextProcessorHelper {
             result = result.concat("&" + (text1.equals(" ") || text1.equals("") ? "String is empty" : text1));
         }
         String[] words = result.split("&");
+        String finalText="";
+        for (String word:words
+             ) {finalText = finalText + word + "\n";
 
-        String final_text1 = String.valueOf(words);
-        return final_text1;
+        }
+        return finalText;
     }
 
     static void equals() {
