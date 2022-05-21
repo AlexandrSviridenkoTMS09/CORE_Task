@@ -53,7 +53,18 @@ public class TextProcessorHelper {
         new_text = new_text.toUpperCase();
         char[] text_char = text.toCharArray();
         char[] new_text_char = new_text.toCharArray();
-        char[] final_text = new char[10];
+        int counter = 0;
+
+        for (int i = 0; i < text.length(); i++) {
+            if (text_char[i] == ' ') {
+                i++;
+            }
+            if (text_char[i] == new_text_char[i]) {
+                counter++;
+            }
+        }
+
+        char[] final_text = new char[counter];
         int j = 0;
 
         for (int i = 0; i < text.length(); i++) {
@@ -65,6 +76,7 @@ public class TextProcessorHelper {
                 j++;
             }
         }
+
         final_text1 = new String(final_text);
         return final_text1;
     }
