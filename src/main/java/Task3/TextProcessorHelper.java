@@ -66,7 +66,6 @@ public class TextProcessorHelper {
 
         char[] final_text = new char[counter];
         int j = 0;
-
         for (int i = 0; i < text.length(); i++) {
             if (text_char[i] == ' ') {
                 i++;
@@ -108,9 +107,10 @@ public class TextProcessorHelper {
             result = result.concat("&" + (text1.equals(" ") || text1.equals("") ? "String is empty" : text1));
         }
         String[] words = result.split("&");
-        String finalText="";
-        for (String word:words
-             ) {finalText = finalText + word + "\n";
+        String finalText = "";
+        for (String word : words
+        ) {
+            finalText = finalText + word + "\n";
 
         }
         return finalText;
