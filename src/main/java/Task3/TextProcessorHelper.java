@@ -4,28 +4,28 @@ import java.util.Scanner;
 
 public class TextProcessorHelper {
 
-    static String addWordEnd(String text) {
+    public static String addWordEnd(String text) {
         String otherText = "Fine!";
         text = text.concat(otherText);
         return text;
     }
 
-    static String addBeforeFirstWord(String text) {
+    public static String addBeforeFirstWord(String text) {
         String new_text = (new StringBuilder(text)).insert(6, " dear").toString();
         return new_text;
     }
 
-    static String deleteCharacter(String text) {
+    public static String deleteCharacter(String text) {
         String newText = text.replace("!", "");
         return newText;
     }
 
-    static String changeWord(String text) {
+    public static String changeWord(String text) {
         String newText = text.replace("user", "programmer");
         return newText;
     }
 
-    static StringBuilder backToFront(String text) {
+    public static StringBuilder backToFront(String text) {
         StringBuilder sb = new StringBuilder();
         String[] words = text.split(" ");
         for (String word : words) {
@@ -38,7 +38,7 @@ public class TextProcessorHelper {
         return sb;
     }
 
-    static String removeSpaces(String text) {
+    public static String removeSpaces(String text) {
         String[] words = text.split(" ");
         String final_text = "";
         for (String word : words) {
@@ -47,7 +47,7 @@ public class TextProcessorHelper {
         return final_text;
     }
 
-    static String removeLowercaseCharacters(String text) {
+    public static String removeLowercaseCharacters(String text) {
         String new_text = text;
         String final_text1;
         new_text = new_text.toUpperCase();
@@ -80,7 +80,7 @@ public class TextProcessorHelper {
         return final_text1;
     }
 
-    static String choiceOfEverySecondLetter(String text) {
+    public static String choiceOfEverySecondLetter(String text) {
 
         StringBuilder newText = new StringBuilder();
         char[] text_char = text.toCharArray();
@@ -94,7 +94,7 @@ public class TextProcessorHelper {
         return final_text;
     }
 
-    static String findWordsOrSpaceAndPrintThem() {
+    public static String findWordsOrSpaceAndPrintThem() {
         System.out.println("Введите размер массива: ");
         Scanner console = new Scanner(System.in);
         int size = console.nextInt();
@@ -116,7 +116,7 @@ public class TextProcessorHelper {
         return finalText;
     }
 
-    static void equals() {
+    public static void equals() {
         String str1 = "Java";
         String str2 = "JAVA";
         String str3 = "C#";
