@@ -36,7 +36,7 @@ public class Belavia {
         Scanner scanner = new Scanner(System.in);
         Belavia[] flightList = inputInfo(scanner);
         int count = 0;
-        System.out.println("Введите необходимый тип перевозки:  ");
+        System.out.println("Введите необходимый тип перевозки: ");
         String flightType = scanner.next();
         for (Belavia b : flightList
         ) {
