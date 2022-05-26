@@ -1,4 +1,4 @@
-package Task8;
+package Task7;
 
 import java.util.Scanner;
 
@@ -41,7 +41,6 @@ public class Metods {
         for (int i = 0; i < students.length; i++) {
             gpa += students[i].getGpa() / students.length;
         }
-
         return gpa;
     }
 }

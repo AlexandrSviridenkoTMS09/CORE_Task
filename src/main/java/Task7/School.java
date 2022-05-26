@@ -1,4 +1,4 @@
-package Task8;
+package Task7;
 
 public class School {
     private static int counter = 0;
