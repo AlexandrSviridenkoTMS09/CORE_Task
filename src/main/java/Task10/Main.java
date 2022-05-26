@@ -1,8 +1,7 @@
-package Task11;
+package Task10;
 
 import java.io.File;
 import java.io.FileInputStream;
-import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
@@ -35,10 +34,8 @@ public class Main {
         try {
             readFile(CORRECT_PATH);
             readFile(INCORRECT_FILE_PATH);
-
         } catch (EmptyFileException ignore) {
         }
-
 
         System.out.println();
 
@@ -50,6 +47,7 @@ public class Main {
         }
 
         System.out.println("\nReading not existing file:");
+
         try {
             readFile(INCORRECT_FILE_PATH);
         } catch (EmptyFileException e) {

@@ -1,4 +1,4 @@
-package Task11;
+package Task10;
 
 public class EmptyFileException extends Exception {
 
