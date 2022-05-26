@@ -1,6 +1,6 @@
-package Task7;
+package Task6;
 
-public class Hello_Anonym {
+public class HelloAnonym {
     public static void main(String[] args) {
 
         MonitoringSystem generalModule = new MonitoringSystem() {
