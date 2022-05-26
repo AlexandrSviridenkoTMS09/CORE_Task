@@ -1,30 +1,27 @@
-package Task6;
+package Task5;
 
 import java.util.Scanner;
 
-import static Task6.Belavia.findFlyt;
-
 public class Belavia {
     String city;
-    int number_aircraft;
     String type;
+    int numberAircraft;
 
     public Belavia(String city, int number_aircraft, String type) {
         this.city = city;
-        this.number_aircraft = number_aircraft;
+        this.numberAircraft = number_aircraft;
         this.type = type;
     }
 
     public Belavia() {
-
     }
 
     public String getCity() {
         return city;
     }
 
-    public int getNumber_aircraft() {
-        return number_aircraft;
+    public int getNumberAircraft() {
+        return numberAircraft;
     }
 
     public String getType() {
@@ -32,19 +29,19 @@ public class Belavia {
     }
 
     public static void main(String[] args) {
-        findFlyt();
+        findFly();
     }
 
-    public static void findFlyt() {
+    public static void findFly() {
         Scanner scanner = new Scanner(System.in);
-        Belavia[] flightList = input_info(scanner);
+        Belavia[] flightList = inputInfo(scanner);
         int count = 0;
         System.out.println("Введите необходимый тип перевозки:  ");
         String flightType = scanner.next();
         for (Belavia b : flightList
         ) {
             if (b.getType().equalsIgnoreCase(flightType)) {
-                System.out.println(b.city + " " + b.number_aircraft);
+                System.out.println(b.city + " " + b.numberAircraft);
                 count++;
             } else {
                 if (count == 0) {
@@ -56,22 +53,20 @@ public class Belavia {
         scanner.close();
     }
 
-    public static Belavia[] input_info(Scanner scanner) {
+    public static Belavia[] inputInfo(Scanner scanner) {
         System.out.println("ВВедите размерность массива: ");
-        Belavia[] userflieList = new Belavia[scanner.nextInt()];
+        Belavia[] userFlyList = new Belavia[scanner.nextInt()];
         int count = 0;
-        while (count < userflieList.length) {
+        while (count < userFlyList.length) {
             System.out.println("Введите город прибытия: ");
-            String input_city = scanner.next();
+            String inputCity = scanner.next();
             System.out.println("Введите номер рейса: ");
-            int input_number = scanner.nextInt();
+            int inputNumber = scanner.nextInt();
             System.out.println("Введите тип перевозки: ");
-            String input_type = scanner.next();
-            userflieList[count] = new Belavia(input_city, input_number, input_type);
+            String inputType = scanner.next();
+            userFlyList[count] = new Belavia(inputCity, inputNumber, inputType);
             count++;
         }
-        return userflieList;
-
-
+        return userFlyList;
     }
 }
