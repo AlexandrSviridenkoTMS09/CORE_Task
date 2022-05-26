@@ -7,7 +7,6 @@ public class Horse extends Animal {
     }
 
     public Horse(String animalName, int footNumber, boolean hasMustache) {
-
         super(animalName, footNumber, hasMustache);
     }
 

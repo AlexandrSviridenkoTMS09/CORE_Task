@@ -9,7 +9,7 @@ public abstract class Animal implements Starveable, Movable, Voiceable {
     private int footNumber;
     private boolean hasMustache;
 
-    public Animal(){ }
+    public Animal(){}
 
     public Animal(String animalName, int footNumber, boolean hasMustache) {
         this.animalName = animalName;

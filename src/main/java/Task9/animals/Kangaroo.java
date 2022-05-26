@@ -6,7 +6,6 @@ public class Kangaroo extends Animal {
     }
 
     public Kangaroo(String animalName, int footNUmber, boolean hasMustache) {
-
         super(animalName, footNUmber, hasMustache);
     }
 

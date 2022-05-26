@@ -71,6 +71,5 @@ public class Main {
         addHorse().isHungry();
         addKangaroo().isHungry();
         addDragonfly().isHungry();
-        System.out.println();
     }
 }
