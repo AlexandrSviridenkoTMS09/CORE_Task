@@ -7,7 +7,7 @@ public class outOfMemoryError {
         String str = "Peter";
         LinkedList<String> linkedList = new LinkedList<String>();
         while(true){
-            str=str+"Welcome to Hell";
+            str += "Welcome to Hell";
             linkedList.add(str);
         }
     }
