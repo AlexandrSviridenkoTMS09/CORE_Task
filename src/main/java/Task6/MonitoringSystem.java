@@ -1,5 +1,5 @@
 package Task6;
 
-public interface MonitoringSystem {
+interface MonitoringSystem {
     public void startMonitoring();
 }
