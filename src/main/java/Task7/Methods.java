@@ -2,10 +2,7 @@ package Task7;
 
 import java.util.Scanner;
 
-public class Metods {
-
-    public Metods() {
-    }
+public class Methods {
 
     public School InputStudent() {
         String surname;
@@ -21,11 +18,8 @@ public class Metods {
             System.out.print("Input students GPA: ");
             gpa = Double.parseDouble(console.nextLine());
         } while (gpa < 1.0d || gpa > 10.0d);
-
-
         return new School(surname, name, gpa);
     }
-
 
     public boolean badStudent(School student, double gpa) {
         return student.getGpa() < gpa;

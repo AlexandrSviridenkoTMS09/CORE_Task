@@ -12,9 +12,7 @@ public class School {
         this.surname = surname;
         this.name = name;
         this.gpa = gpa;
-
         counter++;
-
         System.out.println("\nDefault constructor execution - " + counter + "\n");
     }
 
