@@ -1,15 +1,14 @@
 package Task11;
 
 import java.util.Arrays;
+import java.util.Comparator;
 
 public class Main {
     public static void main(String[] args) {
         Person[] persons = initPersons();
         print(persons);
 
-        Arrays.sort(persons, (o1, o2) -> {
-            return Integer.compare(o1.getAge(), o2.getAge());
-        });
+        Arrays.sort(persons, new MyComparator());
         print(persons);
 
         Arrays.sort(persons);
