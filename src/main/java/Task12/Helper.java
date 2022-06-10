@@ -11,22 +11,30 @@ public class Helper {
         return input;
     }
 
+    public static List<Character> openBracketsInitialization(){
+        List<Character> openBrackets = Arrays.asList('[','{','<','(');
+        return openBrackets;
+    }
+
+    public static List<Character> closeBracketsInitialization(){
+        List<Character> closeBrackets = Arrays.asList(']','}','>',')');
+        return closeBrackets;
+    }
+
     public static boolean checkInput(String input){
     int bracketIndex;
     char[] inputChars = input.toCharArray();
 
     Deque<Character> stack = new ArrayDeque<>();
-    List<Character> openBrackets = Arrays.asList('[','{','<','(');
-    List<Character> closeBrackets = Arrays.asList(']','}','>',')');
 
         for (char aChar : inputChars) {
-        if (openBrackets.contains(aChar)) {
+        if (openBracketsInitialization().contains(aChar)) {
             stack.add(aChar);
-        } else if (closeBrackets.contains(aChar)) {
+        } else if (closeBracketsInitialization().contains(aChar)) {
 
-            bracketIndex = closeBrackets.indexOf(aChar);
+            bracketIndex = closeBracketsInitialization().indexOf(aChar);
 
-            if (openBrackets.get(bracketIndex) != stack.pollLast()) {
+            if (openBracketsInitialization().get(bracketIndex) != stack.pollLast()) {
                 return false;
             }
         }
