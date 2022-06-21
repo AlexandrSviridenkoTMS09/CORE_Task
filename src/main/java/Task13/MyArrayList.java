@@ -38,6 +38,16 @@ public class MyArrayList<T> extends AbstractList<T> implements List<T> {
        return true;
     }
 
+    @Override
+    public T remove(int index) {
+        T element = get(index);
+
+        deleteElement(index);
+        size--;
+
+        return element;
+    }
+
     private Object[] ensureCapacity(Object[] list) {
         if (size == list.length) {
             Object[] newList = new Object[list.length * 3/2];
@@ -47,16 +57,6 @@ public class MyArrayList<T> extends AbstractList<T> implements List<T> {
         }
 
         return list;
-    }
-
-    @Override
-    public T remove(int index) {
-        T element = get(index);
-
-        deleteElement(index);
-        size--;
-        
-        return element;
     }
 
     private void deleteElement(int index) {

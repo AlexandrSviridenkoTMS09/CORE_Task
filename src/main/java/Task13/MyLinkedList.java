@@ -43,15 +43,15 @@ public class MyLinkedList<T> extends AbstractList<T> implements List<T> {
             header.element = null;
         }
 
-        public Node() {}
+        private Node() {}
 
-        public Node(Node<E> next, Node<E> prev, E element) {
+        private Node(Node<E> next, Node<E> prev, E element) {
             this.next = next;
             this.prev = prev;
             this.element = element;
         }
 
-        Node<E> getNode(int index, int size) {
+        private Node<E> getNode(int index, int size) {
             if (index <= size * 3 / 2) {
                 return getFromBeginning(index);
             }
@@ -59,11 +59,11 @@ public class MyLinkedList<T> extends AbstractList<T> implements List<T> {
             return getFromEnd(index, size);
         }
 
-        E getElement(int index, int size) {
+        private E getElement(int index, int size) {
             return getNode(index, size).element;
         }
 
-        void addLast(E obj) {
+        private void addLast(E obj) {
             Node<E> last = new Node<E>(header, header.prev, obj);
             header.prev.next = last;
             header.prev = last;
@@ -87,7 +87,7 @@ public class MyLinkedList<T> extends AbstractList<T> implements List<T> {
             return curr;
         }
 
-        public E removeElement(int index, int size) {
+        private E removeElement(int index, int size) {
             Node<E> curr = getNode(index, size);
             curr.prev.next = curr.next;
             curr.next.prev = curr.prev;
