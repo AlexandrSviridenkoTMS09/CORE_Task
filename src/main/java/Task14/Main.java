@@ -42,9 +42,9 @@ public class Main {
         return newProduct;
     }
 
-    public static void print(Set<String> set) {
+    public static void print(Set<String> product) {
         System.out.println("In store:");
-        System.out.println(set);
+        System.out.println(product);
     }
 
     public static int findMaxValueProduct(HashMap<String, Integer> map) {
