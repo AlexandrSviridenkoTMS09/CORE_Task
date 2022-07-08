@@ -13,6 +13,9 @@ public class Main {
 
         Arrays.sort(persons);
         print(persons);
+
+        Arrays.sort(persons, Comparator.comparingInt(Person::getAge));
+        print(persons);
     }
 
     public static Person[] initPersons() {
